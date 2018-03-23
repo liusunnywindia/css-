@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<link rel="stylesheet" href="fonts/font-awesome-4.3.0/css/font-awesome.css" />
+		<link rel="stylesheet" href="css/animate.css" />
+		<style>
+			.nav{
+				width:600px;
+				height:700px;
+				margin: 50px 400px;
+				
+			}
+			.nav>div{
+				border: 2px solid #00BFFF;
+			
+			}
+			.nav label{
+
+				display: block;
+			    position: relative;
+			    padding: 5px 20px;
+			    height: 34px;
+			    cursor: pointer;
+			    z-index: 20;
+			}
+			label{
+				line-height: 33px;
+			    letter-spacing: .1em;
+			    font-size: 15px;
+			    text-transform: uppercase;
+			    background: #00BFFF;
+			    color: white;
+			}
+			label:hover{
+				background: #1a89d8;
+			}
+			 h4{
+				
+				font-family:"bodoni mt";
+				margin: 2px 5px;
+			}
+			p{
+				border-left: solid 5px #00BFFF;
+				margin-left: 10px;
+				padding-left:4px ;
+			}
+			h6{
+				    background: rgba(0, 149, 255, 0.27);
+				    border-radius: 10px;
+				    padding: 22px;
+				    margin: 11px;
+				    font-family: monospace;
+			}
+			.nav input:checked + label:hover:after{
+	background: transparent url(img/arrow_down.png) no-repeat center center;
+}
+.nav input:checked + label:hover:after{
+	background-image:url(img/arrow_down.png);
+}
+.nav input:checked ~ .content{       
+	z-index:-1;
+	
+	-webkit-animation-name: fadeInLeft1;
+	-webkit-animation-duration: .7s;
+	-webkit-animation-iteration-count: 1;
+}
+
+@keyframes fadeInLeft1 {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-30%, 0, 0);
+    transform: translate3d(-90%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+		</style>
+	</head>
+	<body>
+		<section class="nav">
+			<div>
+				<input id="label-1" name="lida" type="radio" checked style="display: none;"/>
+				<label for="label-1" id="item1"><i class="fa fa-globe"></i>标题一</label>
+				<div class="content" id="a1" style="display: block;">
+			      <h4>Accordion Menu</h4>
+			      <p>Web page backgrounds used to be commonplace, but they became unpopular once designers figured out
+			        that visitors to web pages didn’t want their eyes wrenched out by gaudy tiled background patterns. With
+			        text being as hard to read on-screen as it is, it’s adding insult to injury to inflict some nasty paisley mosaic
+			        background (or worse) on the poor reader, too.</p>
+			      <h6>The following collection of Web sites offers some outstanding references on
+			        CSS and its proper use on well-crafted Web pages. The very first reference
+			        from <a href="#">W3Schools.com</a> is terrific</h6>
+			    </div>
+			</div>
+			<div>
+				<input id="label-2" name="lida" type="radio" checked style="display: none;"/>
+				<label for="label-2" id="item1"><i class="fa fa-globe"></i>标题二</label>
+				<div class="content" id="a1" style="display: block;">
+			      <h4>Accordion Menu</h4>
+			      <p>Web page backgrounds used to be commonplace, but they became unpopular once designers figured out
+			        that visitors to web pages didn’t want their eyes wrenched out by gaudy tiled background patterns. With
+			        text being as hard to read on-screen as it is, it’s adding insult to injury to inflict some nasty paisley mosaic
+			        background (or worse) on the poor reader, too.</p>
+			      <h6>The following collection of Web sites offers some outstanding references on
+			        CSS and its proper use on well-crafted Web pages. The very first reference
+			        from <a href="#">W3Schools.com</a> is terrific</h6>
+			    </div>
+			</div>
+			<div>
+				<input id="label-3" name="lida" type="radio" checked style="display: none;"/>
+				<label for="label-3" id="item1"><i class="fa fa-globe"></i>标题三</label>
+				<div class="content" id="a1" style="display: block;">
+			      <h4>Accordion Menu</h4>
+			      <p>Web page backgrounds used to be commonplace, but they became unpopular once designers figured out
+			        that visitors to web pages didn’t want their eyes wrenched out by gaudy tiled background patterns. With
+			        text being as hard to read on-screen as it is, it’s adding insult to injury to inflict some nasty paisley mosaic
+			        background (or worse) on the poor reader, too.</p>
+			      <h6>The following collection of Web sites offers some outstanding references on
+			        CSS and its proper use on well-crafted Web pages. The very first reference
+			        from <a href="#">W3Schools.com</a> is terrific</h6>
+			    </div>
+			</div>
+		</section>
+		<script type="text/javascript" src="js/jquery-1.12.3.min.js" ></script>
+		<script>
+			
+			$(document).ready(function(){
+			var label= $('label');
+			var content= $('.content');
+			$('.content').not(":first").hide();
+			$('label').on("click",function(){
+				var labelClicked = $(this);
+				var labelContent = labelClicked.next();
+				if(labelContent.is(":visible")) {
+					return;
+				}
+				content.slideUp("normal");
+				labelContent.slideDown("slow");
+			});
+});
+		</script>
+	</body>
+</html>

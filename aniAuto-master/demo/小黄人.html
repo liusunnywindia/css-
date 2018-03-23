@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			body{
+				margin: 0;
+				padding: 0;
+			}
+			.wrapper{
+				width: 300px;
+				margin: 100px auto;
+				
+			}
+			.littleH{
+				position: relative;
+			}
+		.bodyH{
+			position: absolute;
+			width: 240px;
+			height: 400px;
+			border:5px solid #000;
+		    border-radius: 115px;
+		    background: rgb(249,217,70);
+		    overflow: hidden;
+		    z-index: 2;
+			
+		}
+		.trousers{
+			position: absolute;
+			bottom: 0;
+			background: #00BFFF;
+			height: 120px;
+			width:100%;
+			border-top:5px solid  #000000;
+		}
+		.trousers_top{
+			position: absolute;
+			width:50%;
+			height: 59px;
+			bottom: 120px;
+			left: 50px;
+			border:5px solid  #000000;
+			background: #00BFFF;
+			border-bottom: none;
+			
+		}
+		.condoleBelt{
+			position: absolute;
+		}
+	.bodyH .condoleBelt .left,
+.bodyH .condoleBelt .right{
+    width: 120px;
+    height: 16px;
+    border:5px solid #000;
+    background:#00BFFF;
+    position: absolute;
+    top:-90px;
+    left:-35px;
+    z-index: 2;
+    -webkit-transform:rotate(45deg);
+}
+.bodyH .condoleBelt .left{
+       top: -90px;
+    left: 140px;
+    -webkit-transform:rotate(-34deg);
+}
+
+.bodyH .condoleBelt .left:after,
+.bodyH .condoleBelt .right:after{
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    top:4px;
+    left:88px;
+}
+
+.bodyH .condoleBelt .left:after{
+    left:5px;
+}
+
+.pocket{
+	
+    position: absolute;
+    width: 53px;
+    height: 36px;
+    left: 87px;
+    top: 1px;
+    border-radius: 0px 0px 20px 20px;
+    border: 6px solid #000000;
+}
+ .line_left{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 6px solid #000000;
+    left: 7px;
+    bottom: 79px;
+    border-right: 6px solid #000000;
+    border-bottom-right-radius: 79%;
+}
+ .line_right{
+	position: absolute;
+    width: 30px;
+    height: 30px;
+    border-bottom: 6px solid #000000;  
+    bottom: 79px;
+    border-right: 6px solid #000000;
+    border-bottom-right-radius: 79%;
+    -webkit-transform: rotate(95deg);
+    right: 0;
+	
+}
+.line_bottom{
+	height: 40px;
+	border: 3px solid #000000;
+	border-radius: 3px;
+	position: absolute;
+	left: 118px;
+	bottom: 0px;
+}
+.eyes{
+	position: absolute;
+	z-index: 3;
+}
+.eyes .leftEye,.eyes .rightEye{
+	position: absolute;
+	width: 85px;
+	height: 85px;
+	background: #FFFFFF;
+	border-radius: 50%;
+	left: 22px;
+    top: 47px;
+    border: 6px solid #000000;
+
+}
+.eyes .rightEye{
+	left: 122px;
+}
+
+
+
+.eyes .leftEye .left_blackEye,
+.eyes .rightEye .right_blackEye{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	background: #000000;
+	left: 20px;
+	top: 11px;
+	border-radius: 50%;
+	
+}
+
+.right_blackEye{
+	left: 126px;
+}
+.eyes .leftEye .left_blackEye .left_white,.eyes .rightEye .right_blackEye .right_white{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: #FFFFFF;
+	left: 18px;
+	top: 3px;
+	border-radius: 50%;
+}
+.mouse{
+	position: absolute;
+}
+.mouse .mouse_shape{
+	    position: absolute;
+    width: 61px;
+    height: 18px;
+    border-radius: 0px 0px 22px 22px;
+    background: white;
+    top: 150px;
+    left: 80px;
+    border: 6px solid #000000;
+
+}
+.eyes .leftEye:after,
+.eyes .rightEye:after{
+    content: '';
+    width: 28px;
+    height: 18px;
+    background: #000;
+    position: absolute;
+    left:86px;
+    top:37px;
+    -webkit-transform:skewX(20deg) rotate(7deg);
+}
+.eyes .leftEye:after{
+        left: -34px;
+    top: 37px;
+    -webkit-transform: skewX(-20deg) rotate(-16deg);
+}
+.hands{
+    position: relative;
+     
+}
+.hands .leftHand,
+.hands .rightHand{
+    width: 80px;
+    height: 80px;
+    border:6px solid #000;
+    border-radius: 25px;
+    background: rgb(249,217,70);
+    position: absolute;
+    top:220px;
+    left:-23px;
+    -webkit-transform:rotate(40deg);
+     z-index: 1;
+}
+.hands .leftHand{
+    left:182px;
+    top:220px;
+    -webkit-transform:rotate(-40deg);
+}
+.hands .leftHand:after,
+.hands .rightHand:after{
+    content: '';
+    width: 6px;
+    border:3px solid #000;
+    border-radius: 3px;
+    position: absolute;
+    left:13px;
+    top:50px;
+    -webkit-transform:rotate(90deg);
+}
+
+.hands .leftHand:after{
+    left:53px;
+    top:50px;
+    -webkit-transform:rotate(-90deg);
+}
+.feet{
+	position: relative;
+}
+.feet .left_foot,.feet .right_foot{
+	
+	position: absolute;
+    width: 20px;
+    height: 70px;
+    border: 6px solid #000000;
+    background: #000000;
+    top: 386px;
+    left: 59px;
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 9px;
+  
+     /*-webkit-transform-origin: right top;*/
+}
+.feet .right_foot{
+	left: 163px;
+}
+.feet .left_foot:after,.feet .right_foot:after{
+	content: "";
+    width: 50px;
+    height: 27px;
+    border-top-left-radius: 20px;
+    top: 49px;
+    left: -34px;
+    background: #000000;
+    position: absolute;
+}
+.eyes .leftEye .left_blackEye,
+.eyes .rightEye .right_blackEye{
+    -webkit-animation: blackeye 5s ease-in infinite;
+}
+@-webkit-keyframes blackeye{
+    0%,20%,50%,70%,100%{
+        -webkit-transform: translateX(0px);
+    }
+    30%,40%{
+        -webkit-transform: translateX(15px);
+    }
+    80%,90%{
+        -webkit-transform: translateX(-15px);
+    }
+}
+.eyes .leftEye .left_blackEye .left_white,
+.eyes .rightEye .right_blackEye .right_white{
+    -webkit-animation: whiteeye 5s ease-in-out infinite;
+}
+@-webkit-keyframes whiteeye{
+    0%,20%,50%,70%,100%{
+        -webkit-transform: translateX(0px);
+    }
+    30%,40%{
+        -webkit-transform: translate3d(3px,4px,0);
+    }
+    80%,90%{
+        -webkit-transform: translate3d(-15px,4px,0);
+    }
+}
+.hands .rightHand{
+    -webkit-animation:rightHand .8s ease-in-out infinite;
+}
+@-webkit-keyframes rightHand{
+    0%,50%,100%{
+        -webkit-transform: rotate(40deg);
+    }
+    30%{
+        -webkit-transform: rotate(37deg) translateX(1px);
+    }
+}
+.hands .leftHand{
+    -webkit-animation:leftHand .8s ease-in-out infinite;
+}
+@-webkit-keyframes leftHand{
+    0%,50%,100%{
+        -webkit-transform: rotate(-40deg);
+    }
+    80%{
+        -webkit-transform: rotate(-37deg) translateX(-1px);
+    }
+}
+.feet .right_foot{
+    -webkit-animation: rightfoot .8s ease-in-out infinite;
+}
+@-webkit-keyframes rightfoot{
+    0%,50%,100%{
+        -webkit-transform: rotate(0deg);
+    }
+    80%{
+        -webkit-transform: rotate(10deg);
+    }
+}
+.feet .left_foot{
+    -webkit-animation: leftfoot .8s ease-in-out infinite;
+}
+@-webkit-keyframes leftfoot{
+    0%,50%,100%{
+        -webkit-transform: rotate(0deg);
+    }
+
+    30%{
+        -webkit-transform: rotate(-10deg);
+    }
+}
+
+</style>
+	</head>
+	<body>
+		<div class="wrapper">
+			<div class="littleH">
+				<div class="bodyH">
+					<div class="trousers">
+						<div class="condoleBelt">
+							<div class="left"></div>
+							<div class="right"></div>
+						</div>
+						<div class="trousers_top"></div>
+						<div class="pocket"></div>
+						<span class="line_left"></span>
+						<span class="line_right"></span>
+						<span class="line_bottom"></span>
+					</div>
+					<div class="eyes"><!-- 眼睛 -->
+	                <div class="leftEye"><!-- 左眼 -->
+	                    <div class="left_blackEye">
+	                        <div class="left_white"></div>
+	                    </div>
+	                </div>
+                <div class="rightEye"><!-- 右眼 -->
+                    <div class="right_blackEye">
+                        <div class="right_white"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="mouse"><!-- 嘴巴 -->
+                <div class="mouse_shape"></div>
+            </div>
+
+           
+				</div>
+			</div>
+		   <div class="hands"><!-- 双手 -->
+                <div class="leftHand"></div>
+                <div class="rightHand"></div>
+            </div>
+             <div class="feet"><!-- 双脚 -->
+                <div class="left_foot"></div>
+                <div class="right_foot"></div>
+            </div>
+		</div>
+	</body>
+</html>

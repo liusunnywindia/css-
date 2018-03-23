@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+		   .triangle-top,
+    .triangle-right,
+    .triangle-bottom,
+    .triangle-left {
+        margin: 20px auto;
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+    }
+     
+    .triangle-top {
+        border-top-color: coral;
+    }
+     
+    .triangle-right {
+        border-right-color: lightblue;
+    }
+     
+    .triangle-bottom {
+        border-bottom-color: lightgreen;
+    }
+     
+    .triangle-left {
+        border-left-color: mediumpurple;
+    }
+    .flag{
+    	width: 0px;
+    	height: 0px;
+    	border: 2rem solid #ff6600;
+    	border-top-width: 4rem;
+    	border-bottom-color: transparent;
+    	border-bottom-width: 2rem;
+    }
+    .ribbon{
+    	position: relative;
+    	width: 10rem;
+    	height: 3rem;
+    	padding: 0.7rem 0;
+    	font-size: 1.6rem !important;
+    	color: #fff;
+    	text-align: center;
+    	background: #ff0066;
+    	margin: 20px;
+    }
+    .ribbon:before,
+.ribbon:after {
+    content: "";
+    position: absolute;
+    display: block;
+    bottom: -0.6rem;
+    border: 1.5rem solid #ff0066;
+    z-index: -1;
+}
+ 
+.ribbon:before {
+    left: -2.4rem;
+    border-right-width: 1.5rem;
+    border-left-color: transparent;
+    box-shadow: 1px 1px 0 rgba(176, 102, 166, 0.8);
+}
+.ribbon:after {
+    right: -2.4rem;
+    border-left-width: 1.5rem;
+    border-right-color: transparent;
+    box-shadow: 0 1px 0 rgba(176, 102, 166, 0.8);
+}
+.r1{
+	 margin: 20px auto;
+        width: 0;
+        height: 0;
+        border: 100px solid transparent;
+    border-bottom-color: lightgreen;
+}
+</style>
+<body>
+<div class="triangle-top"></div>
+<div class="triangle-right"></div>
+<div class="triangle-bottom"></div>
+<div class="triangle-left"></div>
+<div class="flag"></div>
+<div class="ribbon"></div>
+<div class="r1"></div>
+</body>
+</html>

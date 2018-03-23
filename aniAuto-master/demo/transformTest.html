@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.container{
+				width: 300px;
+				height: 300px;
+				margin: 10px 600px;
+				
+			}
+			.container .cube{
+				
+				transform-style: preserve-3d ; 
+				 transform: rotateX(-50deg) rotateY(-50deg) rotateZ(0deg);  
+			}
+			.cube>div{
+				
+				width:200px;
+				height: 200px;
+				background-color: #663366;
+				  border: 10px solid #66daff;              
+   					 border-radius: 20px; 
+   					 
+
+			}
+			#bo1{
+				 transform:  rotateX(-2deg) translateY(655px) translateZ(-99px);         
+					animation:mymove 3s;
+					animation-iteration-count:2;
+					animation-fill-mode:forwards;
+			}
+			#bo2{
+				transform: translateZ(102px) rotateY(277deg);
+			}
+			#bo3{
+				
+				    transform: translateY(655px) rotateX(-2deg) translateZ(-99px);
+			}
+			#bo4{
+				    transform: translateY(332px) rotateX(90deg);
+			}
+			#bo5{
+				transform: translateY(229px) rotateX(-1deg) translateZ(102px);
+			}
+			#bo6{
+				
+				   transform: translateY(100px) rotateX(-90deg);  
+			}
+			@keyframes mymove
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+
+@-webkit-keyframes mymove /* Safari 和 Chrome */
+{
+	from {top:0px;}
+	to {top:200px;}
+}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<div class="cube">
+				<div id="bo1"></div>
+				<div id="bo2"></div>
+				<div id="bo3"></div>
+				<div id="bo4"></div>
+				<div id="bo5"></div>
+				<div id="bo6"></div>
+			</div>
+			
+		</div>
+	</body>
+</html>

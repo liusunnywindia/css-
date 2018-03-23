@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{margin: 0;padding: 0;}
+			body{
+				overflow: hidden;
+			}
+			#clouds{
+				padding: 100px 0;
+				background: #c9dbe9;
+				background: -webkit-linear-gradient(top,#c9dbe9 0%,#fff 100%);
+				background: -linear-gradient(top,#c9dbe 0%,#fff 100%);
+				background: -moz-linear-gradient(top,#c9dbe9 0%,#fff 100%);
+			}
+			.cloud{
+				width: 200px;height: 60px;
+				background: #fff;
+				border-radius: 200px;
+				-moz-border-radius: 200px;
+				-webkit-border-radius: 200px;
+				position: relative;
+				margin:90px 10px;
+			}
+			.cloud:before,.cloud:after{
+				content: '';
+				position: absolute;
+				background: #fff;
+				width: 100px;
+				height: 80px;
+				position: absolute;
+				top:-15px;
+				left: 10px;
+				border-radius: 100px;
+				-moz-border-radius: 100px;
+				-webkit-border-radius: 100px;
+				-webkit-transform: rotate(30deg);
+				transform: rotate(30deg);
+				-moz-transform: rotate(30deg);
+			}
+			.cloud:after{
+				width: 120px;height: 120px;
+				top: -55px;
+				left: auto;
+				right: 15px;			
+				}
+				.x1{
+					-webkit-animation: moveclouds 15s linear infinite;
+					-moz-animation: moveclouds 15s linear infinite;
+					-o-animation:moveclouds 15s linear infinite;
+				}
+				@-webkit-keyframes moveclouds{
+					0%{margin-left: 1000px;}
+					100%{margin-left: -1000px;}
+				}
+				@-moz-keyframes moveclouds{
+					0%{margin-left: 1000px;}
+					100%{margin-left: -1000px;}
+				}
+				.x2{
+					
+					-webkit-animation: moveclouds1 15s linear infinite;
+					-moz-animation: moveclouds1 15s linear infinite;
+					
+				}
+					@-webkit-keyframes moveclouds1{
+					0%{margin-left: 400px;}
+					100%{margin-left: 1000px;}
+				}
+				@-moz-keyframes moveclouds1{
+					0%{margin-left: 400px;}
+					100%{margin-left: 1000px;}
+				}
+		</style>
+	</head>
+	<body>
+		<div id="clouds">
+			<div class="cloud x1"></div>
+			<div class="cloud x2"></div>
+			<!--<div class="cloud x3"></div>
+			<div class="cloud x4"></div>
+			<div class="cloud x5"></div>-->
+			
+		</div>
+	</body>
+</html>
